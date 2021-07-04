@@ -1,0 +1,32 @@
+.form {
+    color: black;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.form__fieldset {
+    background-color: white;
+    margin: 0 auto;
+    border: 20px solid #05a9be;
+}
+
+.form__button {
+    font-size: 30px;
+    border: 6px solid #05a9be;
+    padding: 5px;
+    color: white;
+    background-color: grey;
+    margin: 5px;
+}
+
+.form__button:hover {
+    background-color: rgb(170, 164, 164);
+    text-decoration: none;
+}
+
+.form__currency {
+    width: 100%;
+    max-width: 200px;
+    font-size: 25px;
+}

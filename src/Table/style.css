@@ -1,0 +1,32 @@
+.tableContainer {
+    overflow-x: auto;
+}
+
+.tableContainer__table {
+    margin: auto;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.tableContainer__caption {
+    font-size: 25px;
+    color: white;
+    background-color: #05a9be;
+    width: 50%;
+    margin: auto;
+}
+
+.tableContainer__cell {
+    text-align: center;
+    padding: 20px;
+    border: 10px solid #05a9be;
+}
+
+.tableContainer__table--hidden {
+    display: none;
+}
+
+.tableContainer__tableBody {
+    background-color: white;
+    color: black;
+}
