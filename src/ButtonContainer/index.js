@@ -1,9 +1,9 @@
 import "./style.css"
 
-const ButtonContainer = () => {
+const ButtonContainer = (props) => {
     return (
         <div className="buttonContainer">
-            <button className="buttonContainer__button js-button">Zwiń tabele</button>
+            <button className="buttonContainer__button">Zwiń tabele</button>
         </div>
     )
 }
