@@ -1,28 +1,52 @@
 import "./style.css";
+import Buttons from "../Buttons";
+import { useState } from "react";
 
-const Form = (props) => {
+const Form = () => {
+
+    const [amount, setAmount] = useState("");
+    const [result, setResult] = useState("");
+
+    const onFormSubmit = (event) => {                                                 //zapobieganie wysłania formularza
+        event.preventDefault();
+    };
+
+    const countCurrency = (result, amount) => {
+        return setResult(result = amount / 4.5784);
+
+    };
+
     return (
-        <form className="form js-form">
+        <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form_legend">Przelicznik walut</legend>
                 <p>
                     <label className="form__label">
-                        Kwota w PLN: <input className="form__currency js-plnCurrency" min="0" type="number" step="any"
-                            name="PLN" required placeholder="Wpisz kwotę" autofocus />
+                        Kwota w PLN:
+                        <input
+                            className="form__currency"
+                            min="0"
+                            type="number"
+                            step="any"
+                            name="PLN"
+                            required
+                            placeholder="Wpisz kwotę"
+                            value={amount}                                             // wartość pola jest równa zmiennej "amount", która na starcie ma pustą wartość
+                            onChange={({ target }) => setAmount(target.value)}         // przy zmianie wartości funckja przyjmuje wartość wpisywaną przez użytkownika
+                        />
                     </label>
                 </p>
+
+                <Buttons countCurrency={countCurrency} result={result} amount={amount} />
                 <p>
-                    Wybierz walutę:
-                    <select className="form__selectCurrency js-selectCurrency">
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
-                    </select>
-                </p>
-                <button className="form__button">Przelicz</button>
-                <button type="reset" className="form__button">Wyczyść</button>
-                <p>
-                    Otrzymasz : <input name="result" className="form__currency js-resultCurrency" readonly />
+                    Kwota w EUR :
+                    <input
+                        name="result"
+                        className="form__currency"
+                        value={result}
+                        readOnly
+
+                    />
                 </p>
             </fieldset>
 
