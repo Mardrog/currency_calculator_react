@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/currency-calculator-react/static/css/main.219f32d2.chunk.css",
-    "main.js": "/currency-calculator-react/static/js/main.6199b8ec.chunk.js",
-    "main.js.map": "/currency-calculator-react/static/js/main.6199b8ec.chunk.js.map",
-    "runtime-main.js": "/currency-calculator-react/static/js/runtime-main.eaf14222.js",
-    "runtime-main.js.map": "/currency-calculator-react/static/js/runtime-main.eaf14222.js.map",
-    "static/js/2.1ecc0b55.chunk.js": "/currency-calculator-react/static/js/2.1ecc0b55.chunk.js",
-    "static/js/2.1ecc0b55.chunk.js.map": "/currency-calculator-react/static/js/2.1ecc0b55.chunk.js.map",
-    "index.html": "/currency-calculator-react/index.html",
-    "static/css/main.219f32d2.chunk.css.map": "/currency-calculator-react/static/css/main.219f32d2.chunk.css.map",
-    "static/js/2.1ecc0b55.chunk.js.LICENSE.txt": "/currency-calculator-react/static/js/2.1ecc0b55.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/currency-calculator-react/static/media/background.d6dc86d1.jpg"
+    "main.css": "/currency_calculator_react/static/css/main.aef755d4.chunk.css",
+    "main.js": "/currency_calculator_react/static/js/main.6199b8ec.chunk.js",
+    "main.js.map": "/currency_calculator_react/static/js/main.6199b8ec.chunk.js.map",
+    "runtime-main.js": "/currency_calculator_react/static/js/runtime-main.ab1693cc.js",
+    "runtime-main.js.map": "/currency_calculator_react/static/js/runtime-main.ab1693cc.js.map",
+    "static/js/2.1ecc0b55.chunk.js": "/currency_calculator_react/static/js/2.1ecc0b55.chunk.js",
+    "static/js/2.1ecc0b55.chunk.js.map": "/currency_calculator_react/static/js/2.1ecc0b55.chunk.js.map",
+    "index.html": "/currency_calculator_react/index.html",
+    "static/css/main.aef755d4.chunk.css.map": "/currency_calculator_react/static/css/main.aef755d4.chunk.css.map",
+    "static/js/2.1ecc0b55.chunk.js.LICENSE.txt": "/currency_calculator_react/static/js/2.1ecc0b55.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/currency_calculator_react/static/media/background.d6dc86d1.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eaf14222.js",
+    "static/js/runtime-main.ab1693cc.js",
     "static/js/2.1ecc0b55.chunk.js",
-    "static/css/main.219f32d2.chunk.css",
+    "static/css/main.aef755d4.chunk.css",
     "static/js/main.6199b8ec.chunk.js"
   ]
 }
