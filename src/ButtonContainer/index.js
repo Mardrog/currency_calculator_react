@@ -1,10 +1,14 @@
 import "./style.css"
 
-const ButtonContainer = (props) => {
+const ButtonContainer = ({ tableButtonText, changeButtonText }) => {
+
+
     return (
         <div className="buttonContainer">
-            <button className="buttonContainer__button">Zwiń tabele</button>
-        </div>
+            <button
+                onClick={() => (changeButtonText(tableButtonText))}
+                className="buttonContainer__button">{tableButtonText}</button>
+        </div >
     )
 }
 
