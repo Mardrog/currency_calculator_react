@@ -12,8 +12,7 @@ const Form = () => {
     };
 
     const countCurrency = (result, amount) => {
-        return setResult(result = amount / 4.5784);
-
+        return setResult((result = amount / 4.5784).toFixed(2));
     };
 
     return (
@@ -45,7 +44,6 @@ const Form = () => {
                         className="form__currency"
                         value={result}
                         readOnly
-
                     />
                 </p>
             </fieldset>
