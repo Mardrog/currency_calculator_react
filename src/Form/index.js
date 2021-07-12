@@ -1,18 +1,11 @@
 import "./style.css";
-import Buttons from "../Buttons";
-import { useState } from "react";
+import { Buttons } from "../Buttons";
+import { ChooseCurrency } from "../ChooseCurrency";
 
-const Form = () => {
+const Form = ({ amount, setAmount, currency, setCurrency, result, countCurrency, currencies, setResult }) => {
 
-    const [amount, setAmount] = useState("");
-    const [result, setResult] = useState("");
-
-    const onFormSubmit = (event) => {                                                 //zapobieganie wysłania formularza
+    const onFormSubmit = (event) => {
         event.preventDefault();
-    };
-
-    const countCurrency = (result, amount) => {
-        return setResult((result = amount / 4.5784).toFixed(2));
     };
 
     return (
@@ -21,7 +14,7 @@ const Form = () => {
                 <legend className="form_legend">Przelicznik walut</legend>
                 <p>
                     <label className="form__label">
-                        Kwota w PLN:
+                        Kwota w PLN:<span>&nbsp;&nbsp;</span>
                         <input
                             className="form__currency"
                             min="0"
@@ -35,10 +28,21 @@ const Form = () => {
                         />
                     </label>
                 </p>
+                <ChooseCurrency
+                    currencies={currencies}
+                    setCurrency={setCurrency}
+                />
 
-                <Buttons countCurrency={countCurrency} result={result} amount={amount} />
+                <Buttons
+                    countCurrency={countCurrency}
+                    result={result}
+                    currency={currency}
+                    amount={amount}
+                    currencies={currencies}
+                    setResult={setResult}
+                />
                 <p>
-                    Kwota w EUR :
+                    Otrzymasz:<span>&nbsp;&nbsp;</span>
                     <input
                         name="result"
                         className="form__currency"

@@ -7,4 +7,4 @@ const Main = ({ children }) => {
     )
 }
 
-export default Main;
+export { Main };

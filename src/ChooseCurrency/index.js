@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 const ChooseCurrency = ({ currency, setCurrency, currencies }) => {
 
@@ -10,13 +10,18 @@ const ChooseCurrency = ({ currency, setCurrency, currencies }) => {
                     value={currency}
                     onChange={({ target }) => setCurrency(target.value)}
                 >
-                    <option>USD</option>
-                    <option>EUR</option>
-                    <option>GBP</option>
+                    {currencies.map((currency => (
+                        <option
+                            key={currency.name}
+                            value={currency.name}
+                        >
+                            {currency.name}
+                        </option>
+                    )))}
                 </select>
             </label>
         </p >
     )
 }
 
-export default ChooseCurrency;
+export { ChooseCurrency };
