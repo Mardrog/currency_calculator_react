@@ -1,11 +1,11 @@
 import "./style.css"
 
-const ButtonContainer = ({ tableButtonText, changeButtonText }) => {
+const ButtonContainer = ({ buttonText, changeButtonText }) => {
     return (
         <div className="buttonContainer">
             <button
-                onClick={() => changeButtonText(tableButtonText)}
-                className="buttonContainer__button">{tableButtonText}</button>
+                onClick={changeButtonText}
+                className="buttonContainer__button">{buttonText}</button>
         </div >
     )
 }

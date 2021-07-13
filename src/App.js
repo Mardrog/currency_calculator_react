@@ -7,17 +7,15 @@ import { useState } from "react";
 
 function App() {
 
-  const changeButtonText = (tableButtonText) => tableButtonText === "Zwiń tabele" ? "Rozwiń tabele" : "Zwiń tabele";
-
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("")
   const [result, setResult] = useState("");
+  const [buttonText, setButtonText] = useState("Zwiń tabele");
 
   const currencies = [
     {
       name: "USD",
       value: 3.8153,
-
     },
     {
       name: "EUR",
@@ -30,8 +28,12 @@ function App() {
   ];
 
   const countCurrency = () => {
-    return setResult(currencies[1].value)
+    setResult(amount / currencies[1].value)
   }
+
+  const changeButtonText = () => {
+    buttonText === "Zwiń tabele" ? setButtonText("Rozwiń tabele") : setButtonText("Zwiń tabele")
+  };
 
   return (
     <Main>
@@ -46,10 +48,13 @@ function App() {
         currencies={currencies}
       />
       <ButtonContainer
+        buttonText={buttonText}
         changeButtonText={changeButtonText}
-        tableButtonText="Zwiń tabele"
+
       />
-      <Table />
+      <Table
+        buttonText={buttonText}
+      />
       <Footer />
     </Main>
 
