@@ -10,7 +10,7 @@ function App() {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("")
   const [result, setResult] = useState("");
-  const [buttonText, setButtonText] = useState("Zwiń tabele");
+  const [hideTable, setHideTable] = useState(true);
 
   const currencies = [
     {
@@ -27,12 +27,8 @@ function App() {
     },
   ];
 
-  const countCurrency = () => {
-    setResult(amount / currencies[1].value)
-  }
-
-  const changeButtonText = () => {
-    buttonText === "Zwiń tabele" ? setButtonText("Rozwiń tabele") : setButtonText("Zwiń tabele")
+  const changeTableText = () => {
+    setHideTable(!hideTable)
   };
 
   return (
@@ -43,17 +39,16 @@ function App() {
         currency={currency}
         setCurrency={setCurrency}
         result={result}
-        countCurrency={countCurrency}
         setResult={setResult}
         currencies={currencies}
       />
       <ButtonContainer
-        buttonText={buttonText}
-        changeButtonText={changeButtonText}
-
+        hideTable={hideTable}
+        changeTableText={changeTableText}
       />
       <Table
-        buttonText={buttonText}
+        hideTable={hideTable}
+
       />
       <Footer />
     </Main>

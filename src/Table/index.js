@@ -1,7 +1,7 @@
 import "./style.css";
 
-const Table = ({ buttonText }) => {
-    if (buttonText === "Zwiń tabele") {
+const Table = ({ hideTable }) => {
+    if (hideTable) {
         return (
             <div className="tableContainer">
                 <table className="tableContainer__table">
