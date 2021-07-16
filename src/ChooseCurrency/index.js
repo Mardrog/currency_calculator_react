@@ -13,7 +13,8 @@ const ChooseCurrency = ({ currency, setCurrency, currencies }) => {
                     {currencies.map((currency => (
                         <option
                             key={currency.name}
-                            value={currency.name}
+                            value={currency.value}
+
                         >
                             {currency.name}
                         </option>

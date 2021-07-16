@@ -1,11 +1,16 @@
 import "./style.css";
 import { Buttons } from "../Buttons";
 import { ChooseCurrency } from "../ChooseCurrency";
+import { useState } from "react";
 
-const Form = ({ amount, setAmount, currency, setCurrency, result, countCurrency, currencies, setResult }) => {
+
+const Form = ({ amount, setAmount, currencies, countResult, result }) => {
+
+    const [currency, setCurrency] = useState("3.8153")
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        countResult(currency, amount);
     };
 
     return (
@@ -31,23 +36,17 @@ const Form = ({ amount, setAmount, currency, setCurrency, result, countCurrency,
                 <ChooseCurrency
                     currencies={currencies}
                     setCurrency={setCurrency}
+                    currency={currency}
                 />
 
-                <Buttons
-                    countCurrency={countCurrency}
-                    result={result}
-                    currency={currency}
-                    amount={amount}
-                    currencies={currencies}
-                    setResult={setResult}
-                />
+                <Buttons />
                 <p>
                     Otrzymasz:<span>&nbsp;&nbsp;</span>
                     <input
                         name="result"
                         className="form__currency"
-                        value={result}
                         readOnly
+                        value={result}
                     />
                 </p>
             </fieldset>
@@ -56,4 +55,4 @@ const Form = ({ amount, setAmount, currency, setCurrency, result, countCurrency,
     )
 }
 
-export default Form;
+export { Form };

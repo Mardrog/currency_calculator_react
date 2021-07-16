@@ -1,10 +1,11 @@
 import "./style.css";
 
-const Buttons = ({ countCurrency, result, amount }) => {
+const Buttons = () => {
 
     return (
         <div>
-            <button className="form__button" onClick={() => console.log(countCurrency(result, amount))}>Przelicz</button>
+            <button
+                className="form__button">Przelicz</button>
             <button className="form__button">Wyczyść</button>
         </div >
     )
