@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Form = ({ amount, setAmount, currencies, countResult, result }) => {
 
-    const [currency, setCurrency] = useState("3.8153")
+    const [currency, setCurrency] = useState(3.8153)
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -47,7 +47,7 @@ const Form = ({ amount, setAmount, currencies, countResult, result }) => {
                         name="result"
                         className="form__currency"
                         readOnly
-                        value={result}
+                        value={result.toFixed(2)}
                     />
                 </p>
             </fieldset>
