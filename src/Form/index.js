@@ -11,6 +11,7 @@ const Form = ({ amount, setAmount, currencies, countResult, result }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         countResult(currency, amount);
+        setAmount("");
     };
 
     return (
