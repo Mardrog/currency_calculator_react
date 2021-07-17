@@ -53,7 +53,7 @@ const Form = ({ amount, setAmount, currencies, countResult, result }) => {
             </fieldset>
 
         </form>
-    )
-}
+    );
+};
 
 export { Form };

@@ -27,7 +27,6 @@ function App() {
       },
     ];
 
-
   const countResult = (currency) => {
     setResult(amount / currency)
   };
@@ -55,8 +54,7 @@ function App() {
       />
       <Footer />
     </Main>
-
   );
-}
+};
 
 export default App;

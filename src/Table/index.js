@@ -26,8 +26,8 @@ const Table = ({ hideTable }) => {
                     </tbody>
                 </table>
             </div>
-        )
-    }
+        );
+    };
     return ""
 };
 

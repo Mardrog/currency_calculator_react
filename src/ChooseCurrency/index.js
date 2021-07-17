@@ -14,7 +14,6 @@ const ChooseCurrency = ({ currency, setCurrency, currencies }) => {
                         <option
                             key={currency.name}
                             value={currency.value}
-
                         >
                             {currency.name}
                         </option>
@@ -22,7 +21,7 @@ const ChooseCurrency = ({ currency, setCurrency, currencies }) => {
                 </select>
             </label>
         </p >
-    )
-}
+    );
+};
 
 export { ChooseCurrency };
