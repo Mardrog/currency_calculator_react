@@ -9,7 +9,7 @@ function App() {
 
   const [amount, setAmount] = useState("");
   const [hideTable, setHideTable] = useState(true);
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState(null);
 
   const currencies =
     [
