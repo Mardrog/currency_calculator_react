@@ -43,12 +43,9 @@ const Form = ({ amount, setAmount, currencies, countResult, result }) => {
                 <Buttons />
                 <p>
                     Otrzymasz:<span>&nbsp;&nbsp;</span>
-                    <input
-                        name="result"
-                        className="form__currency"
-                        readOnly
-                        value={result.toFixed(2)}
-                    />
+                    <span>
+                        {result !== null ? result.toFixed(2) : ""}
+                    </span>
                 </p>
             </fieldset>
 
