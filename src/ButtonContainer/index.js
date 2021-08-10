@@ -1,13 +1,14 @@
-import "./style.css"
+import { StyledButtonContainer, StyledButton } from "./styled";
 
 const ButtonContainer = ({ hideTable, changeTableText }) => {
     return (
-        <div className="buttonContainer">
-            <button
+        <StyledButtonContainer>
+            <StyledButton
                 onClick={changeTableText}
-                className="buttonContainer__button">{hideTable ? "Zwiń tabele" : "Rozwiń tabele"}
-            </button>
-        </div >
+            >
+                {hideTable ? "Zwiń tabele" : "Rozwiń tabele"}
+            </StyledButton>
+        </StyledButtonContainer >
     )
 }
 

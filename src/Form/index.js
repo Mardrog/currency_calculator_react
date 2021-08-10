@@ -1,7 +1,7 @@
-import "./style.css";
 import { Buttons } from "../Buttons";
 import { ChooseCurrency } from "../ChooseCurrency";
 import { useState } from "react";
+import { StyledForm, StyledFieldset, StyledCurrency } from "./styled";
 
 
 const Form = ({ amount, setAmount, currencies, countResult, result }) => {
@@ -15,14 +15,13 @@ const Form = ({ amount, setAmount, currencies, countResult, result }) => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
-                <legend className="form_legend">Przelicznik walut</legend>
+        <StyledForm onSubmit={onFormSubmit}>
+            <StyledFieldset >
+                <legend>Przelicznik walut</legend>
                 <p>
-                    <label className="form__label">
+                    <label>
                         Kwota w PLN:<span>&nbsp;&nbsp;</span>
-                        <input
-                            className="form__currency"
+                        <StyledCurrency
                             min="0"
                             type="number"
                             step="any"
@@ -47,9 +46,9 @@ const Form = ({ amount, setAmount, currencies, countResult, result }) => {
                         {result !== null ? result.toFixed(2) : ""}
                     </span>
                 </p>
-            </fieldset>
+            </StyledFieldset>
 
-        </form>
+        </StyledForm>
     );
 };
 

@@ -1,11 +1,11 @@
-import "./style.css";
+import { StyledButton } from "./styled";
 
 const Buttons = () => {
 
     return (
         <div>
-            <button className="form__button">Przelicz</button>
-            <button className="form__button">Wyczyść</button>
+            <StyledButton >Przelicz</StyledButton>
+            <StyledButton >Wyczyść</StyledButton>
         </div >
     )
 };

@@ -1,10 +1,10 @@
-import "./style.css";
+import { StyledFooter } from "./styled";
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <StyledFooter>
             <p> Wojnowiak Paweł 2021 </p>
-        </footer>
+        </StyledFooter>
     );
 };
 

@@ -1,31 +1,31 @@
-import "./style.css";
+import { StyledTableContainer, StyledTable, StyledCaption, StyledCell, StyledTableBody } from "./styled";
 
 const Table = ({ hideTable }) => {
     if (hideTable) {
         return (
-            <div className="tableContainer">
-                <table className="tableContainer__table">
-                    <caption className="tableContainer__caption">Akutalne kursy walut</caption>
-                    <tbody className="tableContainer__tableBody">
+            <StyledTableContainer>
+                <StyledTable>
+                    <StyledCaption>Akutalne kursy walut</StyledCaption>
+                    <StyledTableBody>
                         <tr>
-                            <th className="tableContainer__cell" scope="col">Nazwa waluty</th>
-                            <th className="tableContainer__cell" scope="col">Kurs</th>
+                            <StyledCell>Nazwa waluty</StyledCell>
+                            <StyledCell>Kurs</StyledCell>
                         </tr>
                         <tr>
-                            <td className="tableContainer__cell">Dolar amerykański (USD)</td>
-                            <td className="tableContainer__cell">3,8153</td>
+                            <StyledCell>Dolar amerykański (USD)</StyledCell>
+                            <StyledCell>3,8153</StyledCell>
                         </tr>
                         <tr>
-                            <td className="tableContainer__cell">Euro (EUR)</td>
-                            <td className="tableContainer__cell">4,5784</td>
+                            <StyledCell>Euro (EUR)</StyledCell>
+                            <StyledCell>4,5784</StyledCell>
                         </tr>
                         <tr>
-                            <td className="tableContainer__cell">Funt szterling (GBP)</td>
-                            <td className="tableContainer__cell">5,2744</td>
+                            <StyledCell>Funt szterling (GBP)</StyledCell>
+                            <StyledCell>5,2744</StyledCell>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
+                    </StyledTableBody>
+                </StyledTable>
+            </StyledTableContainer>
         );
     };
     return ""
